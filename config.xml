@@ -13,7 +13,6 @@
         test. 
     </description>
 <gap:plugin name="org.apache.cordova.splashscreen" />
-<gap:plugin name="org.apache.cordova.inappbrowser" />
 
 <!-- iPhone 6 -->
 <gap:splash src="img/ios/Default-667h@2x.png" gap:platform="ios" width="750" height="1334" />
