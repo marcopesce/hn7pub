@@ -158,7 +158,7 @@
         clicked.addClass('refreshing');
         getStories(true);
     });
-
+		
     // Comments
     function getComments(page) {
         allowCommentsInsert = true;
@@ -248,10 +248,18 @@
             });
         });
     }
-    $$(document).on('click', '.message-kids > a', function (e) {
+    $$(document).on('click', '.comment-show', function (e) {
         var replies = this.dataset.context.split(',');
         getReplies(replies, this);
     });
+    $$(document).on('click', '.comment-save', function (e) {
+        saveComment();
+    });
+		function saveComment()
+		{
+			app.showPreloader('Saving comment');
+			setTimeout(function(){ app.hidePreloader(); }, 1000);
+		};
 
     // Search HN
     function updateOnSearch(results, limit) {
